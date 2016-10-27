@@ -50,6 +50,12 @@ router.get('/dequeue', function(req, res, next) {
   }
 });
 
+router.get('/queue', function(req, res, next) {
+  console.log("return queue numbers");
+  res.json({ 'queue': numberInQueue });
+
+});
+
 function getRandom()
 {
   return parseInt(Math.random()*10)
